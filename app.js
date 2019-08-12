@@ -1,5 +1,5 @@
 const getMainId = document.getElementById('board');
-
+//
 
 
 let createBoard = (gridAmount) => {
