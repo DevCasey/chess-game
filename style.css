@@ -1,17 +1,15 @@
-/* .white {
-    height: 20px;
-    width: 20px;
-    border: 1px solid black;
+#board {
+    height: 500px;
+    width: 960px;
+    font-size: 0;
+    margin: auto; 
+    padding-top: 50px;
+    text-align: center;
 }
 
-.black {
-    height: 20px;
-    width: 20px;
-    border: 1px solid black;
-} */
 
-table > tr {
-    height: 20px;
-    width: 20px;
-    color: black;
+.column {
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
 }

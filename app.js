@@ -2,21 +2,18 @@ const getMainId = document.getElementById('board');
 
 
 
-let createBoard = () => {
-    let table = document.createElement('table');
-    for(let i = 1; i < 9; i++) {
-        let tr = document.createElement('tr');
-        for(let j = 1; j< 0; j++) {
-            let td = document.createElement('td');
-            if(i%2 == j%2) {
-                td.className = "white";
-            } else {
-                td.className = "black";
-            }
-            tr.appendChild(td);
+let createBoard = (gridAmount) => {
+    for(let i = 0; i < 9; i++) {
+        const row = document.createElement('div');
+        row.classList.add('outterDiv');
+        getMainId.appendChild(row);
+        for(let j = 0; j < 9; j++) {
+            const col = document.createElement('div');
+            col.classList.add('column');
+            col.style.width = `${520/gridAmount}px`;
+            col.style.height = `${520/gridAmount}px`;
+            row.appendChild(col);
         }
-        table.appendChild(tr);
     }
-    document.body.appendChild(table);
 }
-window.onload = createBoard;
+window.onload = createBoard(8);
